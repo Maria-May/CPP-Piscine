@@ -29,8 +29,11 @@ void	PhoneBook::	searchContact(void)
 	std::cout << "Enter index of contact to display full information: ";
 	while (!(std::cin >> index))
 	{
+		std::cout << std::endl << "Enter a valid integer, try again: ";
 		if (std::cin.eof())
 		{
+			std::cin.clear();
+			clearerr(stdin);
 			continue ;
 		}
 	}

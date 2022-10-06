@@ -15,7 +15,14 @@ int main(void)
 	{
 		std::cout << ">";
 		std::getline(std::cin, cmdLine);
-		if (cmdLine == "ADD")
+		if (std::cin.eof())
+		{
+			std::cout << "Try agin, please)" << std::endl;
+			std::cin.clear();
+			clearerr(stdin);
+			continue;
+		}
+		else if (cmdLine == "ADD")
 			PhoneBook.addContact();
 		else if (cmdLine == "SEARCH")
 			PhoneBook.searchContact();
@@ -26,9 +33,6 @@ int main(void)
 	}
 	return (0);
 }
-
-
-
 
 
 
