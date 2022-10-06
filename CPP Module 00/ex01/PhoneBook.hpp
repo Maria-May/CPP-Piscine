@@ -7,7 +7,7 @@ class PhoneBook
 {
 	private:
 			Contact contacts[8];
-			size_t last_contact;
+			size_t lastContact;
 
 	public:
 			PhoneBook();
