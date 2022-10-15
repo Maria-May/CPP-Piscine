@@ -28,7 +28,7 @@ int main(void)
 			PhoneBook.searchContact();
 		else if (cmdLine == "EXIT")
 			PhoneBook.exitFunc();
-		else if (cmdLine == "")
+		else
 			std::cout << "PhoneBook can only accept ADD SEARCH EXIT commands" << std::endl;	
 	}
 	return (0);

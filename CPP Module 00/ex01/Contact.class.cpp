@@ -10,7 +10,7 @@ Contact:: ~Contact()
 
 }
 
-int	Contact:: checkAndSet(const char *message, std:: string &infoToSet) // checking &
+int	Contact:: checkAndSet(const char *message, std:: string &infoToSet)
 {
 	std::cout << message << std::endl;
 	std::getline(std::cin, infoToSet);
