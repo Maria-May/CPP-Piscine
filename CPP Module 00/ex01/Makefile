@@ -8,8 +8,8 @@ HEADERS =	Contact.hpp \
 			PhoneBook.hpp \
 
 SRC		=	main.cpp \
-			Contact.class.cpp \
-			PhoneBook.class.cpp \
+			Contact.cpp \
+			PhoneBook.cpp \
 
 OBJS		=	$(patsubst %.cpp, %.o, $(SRC))
 

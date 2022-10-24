@@ -36,6 +36,9 @@ void	PhoneBook::	searchContact(void)
 			clearerr(stdin);
 			continue ;
 		}
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<int>::max(),'\n');
+		std::cin.clear();
 	}
 	if (index < 0 || index > 7)
 	{

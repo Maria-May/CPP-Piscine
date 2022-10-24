@@ -2,7 +2,7 @@
 #define CONTACT_HPP
 
 #include <iostream>
-#include <iomanip> // for setw()
+#include <iomanip>
 
 class Contact
 {
