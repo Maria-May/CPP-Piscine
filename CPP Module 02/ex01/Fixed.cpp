@@ -38,11 +38,26 @@ Fixed& Fixed::operator=(const Fixed& fixed)
 
 int Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
+	// std::cout << "getRawBits member function called" << std::endl;
 	return (_num);
 }
 
 void Fixed::setRawBits( int const raw )
 {
 	_num = raw;
+}
+
+float Fixed::toFloat( void ) const
+{
+	return  ((_num) / (float)(1 << _bits));
+}
+
+int Fixed::toInt( void ) const
+{
+	return (_num >> _bits);
+}
+
+std::ostream & operator<< (std::ostream &out, const Fixed &c)
+{
+	return out << c.toFloat();
 }
