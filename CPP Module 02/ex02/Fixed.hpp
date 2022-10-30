@@ -35,6 +35,8 @@ public:
 
 	Fixed	operator++( void );
 	Fixed	operator--( void );
+	Fixed	operator++(int);
+	Fixed	operator--(int);
 
 	static	Fixed	&min(Fixed	&a, Fixed	&b);
 	static	const	Fixed	&min(const	Fixed &a, const	Fixed	&b);

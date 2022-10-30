@@ -2,36 +2,36 @@
 
 Fixed::Fixed()
 {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 	_num = 0;
 }
 
 Fixed::Fixed(const int number)
 {
-	std::cout << "Int constructor called" << std::endl;
+	// std::cout << "Int constructor called" << std::endl;
 	_num = number << _bits;
 }
 
 Fixed::Fixed(const float number)
 {
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 	_num = std::roundf(number * (1 << _bits));
 }
 
 Fixed::Fixed(const Fixed &src)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" <<std::endl;
+	// std::cout << "Destructor called" <<std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed& fixed)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	_num = fixed.getRawBits();
 	return (*this);
 }
@@ -112,7 +112,31 @@ Fixed	Fixed::operator/( const Fixed &other ) const
 	return (Fixed(this->toFloat() / other.toFloat()));
 }
 
+Fixed	Fixed::operator++( void )
+{
+	++(this->_num);
+	return (*this);
+}
 
+Fixed	Fixed::operator--( void )
+{
+	--(this->_num);
+	return (*this);
+}
+
+Fixed	Fixed::operator++(int)
+{
+	Fixed tmp(*this);
+  	operator++();
+  	return tmp;   
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed tmp(*this);
+  	operator--();
+  	return tmp;
+}
 
 Fixed	&Fixed::min(Fixed	&a, Fixed	&b)
 {
