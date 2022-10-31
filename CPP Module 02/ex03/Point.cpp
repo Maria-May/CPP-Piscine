@@ -8,7 +8,19 @@ Point::Point(const Point &other) : _x(other._x), _y(other._y) {}
 
 Point& Point::operator=(const Point& other)
 {
+	const_cast <Fixed &>(_x) = other._x;
+	const_cast <Fixed &>(_x) = other._y;
+	return (*this);
+}
 
+const Fixed& Point::getX() const
+{
+	return (_x);
+}
+
+const Fixed& Point::getY() const
+{
+	return (_y);
 }
 
 Point::~Point() {}
