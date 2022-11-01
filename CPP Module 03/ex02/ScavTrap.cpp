@@ -35,7 +35,7 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (!this->getHit() || !this->getEnergy())
 		return ;
-		std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing " << this->getAttackDamage() << " points of damage!" << std::endl;
 	this->consumeEnergy();
 }
 
