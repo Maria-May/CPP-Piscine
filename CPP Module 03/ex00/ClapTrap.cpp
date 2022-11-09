@@ -11,7 +11,7 @@ ClapTrap::ClapTrap(const ClapTrap &b)
 	std::cout << "ClapTrap " << this->_name << " copy is created!" << std::endl;
 }
 
-ClapTrap& ClapTrap::operator= (const ClapTrap& other)
+ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
 	if (this != &other)
 	{

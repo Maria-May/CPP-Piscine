@@ -13,7 +13,7 @@ private:
 public:
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap &b);
-	ClapTrap& operator= (const ClapTrap& other);
+	ClapTrap& operator=(const ClapTrap& other);
 	~ClapTrap();
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
