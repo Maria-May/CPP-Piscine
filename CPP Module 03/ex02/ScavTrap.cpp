@@ -1,7 +1,17 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap()
+{	
+	this->_name = "default name";
+	this->_hitPoint = 0;
+	this->_energyPoint = 0;
+	this->_attackDamage = 0;
+	std::cout << "ClapTrap " << this->_name << " is created!" << std::endl;
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	this->setName(name);
 	std::cout << "ScavTrap " << this->getName() << " is created!" << std::endl;
 	this->setStarterPack(name, 100, 50, 20);
 }

@@ -4,16 +4,6 @@
 
 int main(void)
 {
-	// ClapTrap hero("Lucky Hero");
-
-	// hero.attack("Little evil");
-	// hero.takeDamage(5);
-	// hero.beRepaired(5);
-	// hero.takeDamage(9);
-	// hero.beRepaired(0);
-	// hero.takeDamage(1);
-	// hero.beRepaired(5);
-
 	FragTrap superHero("Super Hero");
 
 	superHero.attack("Lucky Hero");
@@ -23,9 +13,6 @@ int main(void)
 	superHero.beRepaired(0);
 	superHero.takeDamage(1);
 	superHero.beRepaired(5);
-	// superHero.guardGate();
-	// superHero.takeDamage(100);
-	// superHero.guardGate();
 	superHero.highFivesGuys();
 	return (0);
 }
