@@ -1,31 +1,21 @@
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void)
 {
-	// ClapTrap hero("Lucky Hero");
+	DiamondTrap	hero("SuperHero");
 
-	// hero.attack("Little evil");
-	// hero.takeDamage(5);
-	// hero.beRepaired(5);
-	// hero.takeDamage(9);
-	// hero.beRepaired(0);
-	// hero.takeDamage(1);
-	// hero.beRepaired(5);
+	hero.takeDamage(50);
+	hero.beRepaired(20);
 
-	FragTrap superHero("Super Hero");
+	DiamondTrap hero2 = hero;
+	DiamondTrap hero3;
 
-	superHero.attack("Lucky Hero");
-	superHero.takeDamage(5);
-	superHero.beRepaired(5);
-	superHero.takeDamage(9);
-	superHero.beRepaired(0);
-	superHero.takeDamage(1);
-	superHero.beRepaired(5);
-	// superHero.guardGate();
-	// superHero.takeDamage(100);
-	// superHero.guardGate();
-	superHero.highFivesGuys();
-	return (0);
+	hero2.beRepaired(20);
+	hero.attack("SuperHero2");
+	hero.whoAmI();
+	hero2.whoAmI();
+	hero3.whoAmI();
+	hero.guardGate();
+	hero.highFivesGuys();
+	return 0;
 }
