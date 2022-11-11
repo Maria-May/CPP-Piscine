@@ -7,7 +7,7 @@ DiamondTrap::DiamondTrap() : ClapTrap("Default name_clap_name"), ScavTrap("Defau
 	ScavTrap::_energyPoint = 50;
 	FragTrap::_attackDamage = 30;
 }
-DiamondTrap::DiamondTrap(std::string &name) : ClapTrap(name + "_clap_name"), ScavTrap("Default name_Scav"), FragTrap(name + "_Frag"), _name(name)
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name + "_Scav"), FragTrap(name + "_Frag"), _name(name)
 {
 	std::cout << "DiamondTrap " << this->_name << " is created!" << std::endl;
 	FragTrap::_hitPoint = 100;
